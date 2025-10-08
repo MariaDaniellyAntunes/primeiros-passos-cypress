@@ -13,7 +13,7 @@ const selectorList = {
 
 
   it('Login - success', () => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(selectorList.userName).type(userData.userSuccess.userName)
     cy.get(selectorList.userPassword).type(userData.userSuccess.password)
     cy.get(selectorList.loginButton).click()
@@ -21,7 +21,7 @@ const selectorList = {
     cy.get(selectorList.dashboardGrid)
   })
   it('Login - Fail',() => {
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(selectorList.userName).type(userData.userfail.userName)
     cy.get(selectorList.userPassword).type(userData.userfail.password)
     cy.get(selectorList.loginButton).click()
